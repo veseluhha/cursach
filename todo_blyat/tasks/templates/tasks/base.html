@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
+    <title>ToDo List</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 50px;
+            list-style: none;
+            outline: none;
+            font-family: 'Roboto', -apple-system, system-ui, sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width:600px;
+            margin: auto;
+            padding:20px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1;
+            box-shadow: 1px 2px 20px #f1f1f1;
+            font-size: 16px;
+
+        }
+
+        .header-bar {
+            {#display: flex;#}
+            justify-content: space-between;
+            background-color:#f4f6f8;
+            color: #E3ACB2;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1;
+
+        }
+
+        .header-bar a {
+            color: #7F7D7D;
+            text-decoration: none;
+            &:hover {
+                filter: brightness(90%);
+            }
+            &:active {
+                filter: brightness(80%);
+            }
+            &:disabled {
+                background: #d8d8d8;
+            }
+        }
+
+        #search-add-wrapper {
+            {#display: flex;#}
+            justify-content: space-between;
+            {#align-items: center;#}
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        .card-body{
+            {#background-color: #7B8A91;#}
+
+            padding: 10px;
+            margin: 10px;
+            border-radius: 3px;
+            color: #E3ACB2;
+            font-size: 16px;
+
+        }
+
+        .task-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            overflow: hidden;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 2px 20px #f1f1f1;
+        }
+
+        .task-content {
+            margin: 5px;
+            padding: 5px;
+            text-decoration: none;
+            flex: 1;
+            overflow: auto;
+
+        }
+        
+        input[type=text], input[type=password], textarea {
+            border: 1px solid #f1f1f1;
+            box-shadow: 1px 2px 20px #f1f1f1;
+            border-radius: 5px;
+            margin: 10px auto;
+            padding: 10px;
+            width: 90%;
+        }
+
+        .button {
+            background-color: #E3ACB2;
+            border-radius: 4px;
+            border: 0;
+            padding: 10px;
+            margin: 10px;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            &:hover {
+                filter: brightness(90%);
+            }
+            &:active {
+                filter: brightness(80%);
+            }
+            &:disabled {
+                background: #d8d8d8;
+            }
+        }
+        
+        a{
+
+            flex: 1;
+            text-decoration: none;
+            font-weight: 200;
+            color: #7F7D7D;
+            font-size: 22px;
+            padding: 20px auto;
+            } 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div> 
+</body>
+</html>
